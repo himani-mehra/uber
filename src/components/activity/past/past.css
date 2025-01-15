@@ -1,0 +1,58 @@
+.past {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 20px 0;
+}
+.personal {
+  gap: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 14px 16px;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 38px;
+  background-color: #f3f3f3 !important;
+}
+.personal-menu {
+  display: none; /* Hide personal by default */
+  position: absolute;
+  top: 60px; /* Adjust as needed */
+  right: 16px; /* Position it according to the button */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  width: 200px;
+  z-index: 10;
+}
+
+/* Show the personal when it is open */
+.personal-menu.open {
+  display: block;
+  background-color: #f0f0f0;
+}
+
+/* personal List Styling */
+.personal-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* personal Option Styling */
+.personal-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.personal-menu li:hover {
+  background-color: white;
+  transition: 0.3s;
+}
+.two-dropdown {
+  gap: 5px;
+}

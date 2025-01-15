@@ -1,0 +1,78 @@
+.ride {
+  flex: initial;
+  padding: 16px 0;
+  border: 2px solid rgb(243, 243, 243);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.get-ride {
+  display: inline-block;
+  padding: 0px 16px;
+  position: relative;
+  font-family: "UberMove", "UberMoveText", system-ui, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.ride-details {
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 0px 16px;
+}
+.ride-input {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  -webkit-box-flex: 1;
+  flex: 1 1 0%;
+  background-color: rgb(243, 243, 243);
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 100%;
+  gap: 8px;
+  display: flex;
+  min-height: 46px;
+}
+
+.search {
+  font-size: 16px;
+  color: rgb(166, 166, 166);
+  border-radius: 8px;
+  background-color: rgb(243, 243, 243) !important;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 16px !important;
+}
+
+.for-me {
+  display: inline-flex;
+  background-color: rgb(243, 243, 243);
+  cursor: pointer;
+  font-size: 14px;
+  max-width: 200px;
+  border-radius: 30px;
+  padding: 10px 12px;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  margin: 10px 0;
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,67 @@
+.upcoming-ride-top {
+  border: 2px solid rgb(243, 243, 243);
+  border-radius: 10px;
+}
+.upcoming-ride-top:hover {
+    background-color: rgb(243, 243, 243);
+
+}
+
+.cab-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+.upcoming-ride-header {
+    
+  display: inline-block;
+  margin: 22px 0 0 14px;
+  position: relative;
+  font-family: "UberMove", "UberMoveText", system-ui, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.upcoming-a-ride {
+  gap: 5px;
+  margin: 10px 0 0 14px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  padding: 10px 12px;
+  background-color: rgb(225, 224, 224);
+  margin-bottom: 20px;
+  color: black;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.upcoming-a-ride:hover {
+  transition: 0.1s;
+}
+
+
+.more-btn {
+  gap: 5px;
+  border-radius: 38px;
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  padding: 8px 10px;
+  background-color: rgb(243, 242, 242);
+  margin-bottom: 20px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}

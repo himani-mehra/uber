@@ -1,0 +1,40 @@
+.back-to-trips {
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.back-to-trips:hover {
+  background-color: #f3f3f3;
+  transition: 0.3s;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.user-trip {
+  display: flex;
+  flex-direction: column;
+}
+.icon {
+  width: 35px;
+  height: 35px;
+}
+.trip-detail-btn {
+  gap: 5px;
+  border-radius: 38px;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  padding: 10px 14px;
+  background-color: rgb(243, 242, 242);
+  margin-bottom: 20px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+.trip-detail-btn:hover {
+  background-color: #e6e5e5;
+  transition: 0.3s;
+  cursor: pointer;
+}

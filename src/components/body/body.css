@@ -1,0 +1,16 @@
+.body-component {
+  grid-template-columns: 30% 70%;
+  display: grid;
+}
+
+.scrollable-content {
+  overflow-y: auto;
+  height: 100%;
+  padding: 16px;
+}
+
+.fixed-content {
+  height: 100%;
+  padding: 16px;
+  
+}

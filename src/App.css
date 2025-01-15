@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header-class {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures the header stays on top */
+  background-color: #fff; /* Optional: Set a background for the header */
+  box-shadow: 0 4px 2px -2px gray; /* Optional: Add a shadow for the header */
+}
+
+.body-class {
+  flex-grow: 1;
+  overflow-y: auto; /* Makes the body section scrollable */
+}
