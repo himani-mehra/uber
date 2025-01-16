@@ -9,7 +9,7 @@ const Map = ({ userLocation }) => {
   const mapInstance = useRef(null);
   const markerRef = useRef(null);
   const carMarkersRef = useRef([]);
-  const routeControlRef = useRef(null); // Ref to store the route control instance
+  const routeControlRef = useRef(null);
 
   const generateRandomCoordinates = (center, radius = 0.005) => {
     const randomOffset = () => (Math.random() - 0.5) * radius * 2;
@@ -20,7 +20,7 @@ const Map = ({ userLocation }) => {
   };
 
   const generateRandomOrientation = () => {
-    return Math.random() * 360; // Random angle between 0 and 360 degrees
+    return Math.random() * 360;
   };
 
   const updateCarMarkers = (center) => {
@@ -69,16 +69,13 @@ const Map = ({ userLocation }) => {
         }
       ).addTo(mapInstance.current);
 
-      // Define pickup and dropoff locations
-      const pickup = [12.9255, 77.6247]; // HSR Layout coordinates
-      const dropoff = [12.9764, 77.7044]; // Whitefield coordinates
+      const pickup = [12.9255, 77.6247];
+      const dropoff = [12.9764, 77.7044];
 
-      // If route already exists, remove it
       if (routeControlRef.current) {
         mapInstance.current.removeControl(routeControlRef.current);
       }
 
-      // Add the new route
       routeControlRef.current = L.Routing.control({
         waypoints: [
           L.latLng(userLocation.latitude, userLocation.longitude),
