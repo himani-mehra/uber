@@ -3,6 +3,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-routing-machine";
 import carLogo from "../../assests/car-marker.png";
+import { generateRandomCars } from "../../utils/randomCar";
 
 const Map = ({ userLocation }) => {
   const mapRef = useRef(null);
@@ -11,27 +12,15 @@ const Map = ({ userLocation }) => {
   const carMarkersRef = useRef([]);
   const routeControlRef = useRef(null);
 
-  const generateRandomCoordinates = (center, radius = 0.005) => {
-    const randomOffset = () => (Math.random() - 0.5) * radius * 2;
-    return {
-      latitude: center.latitude + randomOffset(),
-      longitude: center.longitude + randomOffset(),
-    };
-  };
-
-  const generateRandomOrientation = () => {
-    return Math.random() * 360;
-  };
-
   const updateCarMarkers = (center) => {
     carMarkersRef.current.forEach((marker) =>
       mapInstance.current.removeLayer(marker)
     );
     carMarkersRef.current = [];
-    const numberOfCars = Math.floor(Math.random() * 15) + 10;
-    for (let i = 0; i < numberOfCars; i++) {
-      const randomCoordinates = generateRandomCoordinates(center);
-      const randomAngle = generateRandomOrientation();
+
+    const cars = generateRandomCars(center);
+    cars.forEach((randomCar) => {
+      const randomAngle = randomCar.orientation;
       const randomIcon = L.divIcon({
         className: "car-icon",
         html: `<img src="${carLogo}" style="transform: rotate(${randomAngle}deg); width: 48px; height: 48px;" />`,
@@ -40,14 +29,11 @@ const Map = ({ userLocation }) => {
         popupAnchor: [0, -32],
       });
 
-      const marker = L.marker(
-        [randomCoordinates.latitude, randomCoordinates.longitude],
-        {
-          icon: randomIcon,
-        }
-      ).addTo(mapInstance.current);
+      const marker = L.marker([randomCar.latitude, randomCar.longitude], {
+        icon: randomIcon,
+      }).addTo(mapInstance.current);
       carMarkersRef.current.push(marker);
-    }
+    });
   };
 
   useEffect(() => {

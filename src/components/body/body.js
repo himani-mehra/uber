@@ -1,57 +1,39 @@
-
-// import React from "react";
-// import "./body.css";
-// import Package from "../package/package";
-// import Rentals from "../rentals/rentals";
-// import Ride from "../ride/ride";
-// import Map from "../map/map";
-// import Shuttle from "../shuttle/shuttle";
-
-// const Body = ({ activeOption }) => {
-//   return (
-//     <div className="body-component">
-//       <div className="scrollable-content">
-//         {activeOption === "ride" && <Ride />}
-//         {activeOption === "packages" && <Package />}
-//         {activeOption === "rentals" && <Rentals />}
-//         {activeOption === "shuttle" && <Shuttle />}
-//       </div>
-//       <div className="fixed-content">
-//         <Map />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Body;
-
-
-
-
-
-// Body.js
-
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./body.css";
 import Package from "../package/package";
+import PackageMobile from "../mobile/mobilePackage/mobilePackage";
 import Rentals from "../rentals/rentals";
+import RentalsMobile from "../mobile/mobileRental/mobileRental";
 import Ride from "../ride/ride";
-import Map from "../map/map";
+import RideMobile from "../mobile/mobileRide/mobileRide";
 import Shuttle from "../shuttle/shuttle";
+import ShuttleMobile from "../mobile/mobileShuttle/mobileShuttle";
+// import Map from "../map/map";
 
 const Body = ({ activeOption, userLocation }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="body-component">
       <div className="scrollable-content">
-        {activeOption === "ride" && <Ride />}
-        {activeOption === "packages" && <Package />}
-        {activeOption === "rentals" && <Rentals />}
-        {activeOption === "shuttle" && <Shuttle />}
+        {activeOption === "ride" && (isMobile ? <RideMobile /> : <Ride />)}
+        {activeOption === "packages" &&
+          (isMobile ? <PackageMobile /> : <Package />)}
+        {activeOption === "rentals" &&
+          (isMobile ? <RentalsMobile /> : <Rentals />)}
+        {activeOption === "shuttle" &&
+          (isMobile ? <ShuttleMobile /> : <Shuttle />)}
       </div>
-      <div className="fixed-content">
+      {/* <div className="fixed-content">
         <Map userLocation={userLocation} />
-      </div>
+      </div> */}
     </div>
   );
 };

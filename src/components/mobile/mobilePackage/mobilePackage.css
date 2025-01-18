@@ -1,0 +1,43 @@
+.courier-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+.courier-image {
+  object-fit: cover;
+  vertical-align: bottom;
+  width: 100%;
+}
+.courier-info {
+  border-bottom: none;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 16px;
+  font-family: "UberMove", "UberMoveText";
+}
+.package-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 20px;
+  align-items: center;
+}
+.send-receive {
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  padding: 16px 20px;
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  width: 100%;
+  margin: 10px 0;
+  transition:0.3s ease;
+}
+.send-receive.active {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}

@@ -10,13 +10,14 @@ const Header = ({onOptionClick}) => {
      setActiveOption(option);
      onOptionClick(option);
    };
+   
+    const toggleHeaderDropdown = () => {
+      setIsHeaderDropdownOpen(!isHeaderDropdownOpen);
+    };
     
   const navigate = useNavigate();
   const [isHeaderDropdownOpen, setIsHeaderDropdownOpen] = useState(false);
 
-  const toggleHeaderDropdown = () => {
-    setIsHeaderDropdownOpen(!isHeaderDropdownOpen);
-  };
   const handleActivityClick = () => {
     navigate("/activity");
   };

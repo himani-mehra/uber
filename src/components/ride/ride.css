@@ -11,17 +11,18 @@
   display: inline-block;
   padding: 0px 16px;
   position: relative;
-  font-family: "UberMove", "UberMoveText", system-ui, "Helvetica Neue",
-    Helvetica, Arial, sans-serif;
+  font-family: "UberMove", "UberMoveText", system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
 }
+
 .ride-details {
   font-size: 16px;
   border-radius: 8px;
   padding: 0px 16px;
 }
+
 .ride-input {
   cursor: pointer;
   display: flex;
@@ -58,6 +59,7 @@
   gap: 5px;
   margin-bottom: 16px;
 }
+
 .suggestions {
   list-style: none;
   padding: 0;

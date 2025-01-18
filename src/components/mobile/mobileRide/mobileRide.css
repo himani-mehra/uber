@@ -1,0 +1,50 @@
+.mobile-ride {
+  flex: initial;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-ride-input {
+  align-items: center;
+  background-color: rgb(243, 243, 243);
+  border-radius: 8px;
+  padding: 14px 16px;
+  width: 100%;
+  gap: 8px;
+  display: flex;
+  min-height: 46px;
+}
+
+.mobile-input-field {
+  background-color: rgb(243, 243, 243);
+}
+
+.mobile-for-me {
+  display: inline-flex;
+  background-color: rgb(243, 243, 243);
+  cursor: pointer;
+  font-size: 14px;
+  max-width: 200px;
+  border-radius: 30px;
+  padding: 10px 12px;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+
+.mobile-suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid #ddd; */
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.mobile-suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.mobile-suggestions li:hover {
+  margin: 10px 0;
+  background-color: #f0f0f0;
+}

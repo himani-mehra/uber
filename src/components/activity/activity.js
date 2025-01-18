@@ -9,8 +9,8 @@ const Activity = () => {
     <div className="activity-section">
       <div className="left">Tax profile</div>
       <div className="middle">
-        {/* <RideHistoryDetail /> */}
-        <UpcomingRides />
+        <RideHistoryDetail />
+        {/* <UpcomingRides /> */}
       </div>
       <div className="right">
         <RequestRide />

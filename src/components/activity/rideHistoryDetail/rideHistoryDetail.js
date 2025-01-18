@@ -65,8 +65,8 @@ const RideHistoryDetail = () => {
           <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
             <title>Credit card</title>
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M1 4h22v4H1V4Zm0 7h22v9H1v-9Z"
               fill="currentColor"
             ></path>
@@ -78,8 +78,8 @@ const RideHistoryDetail = () => {
             <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
               <title>Receipt</title>
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M3 23V1h18v22l-5.5-3-3.5 3-3.5-3L3 23ZM7 9h10V6H7v3Zm10 3H7v3h10v-3Z"
                 fill="currentColor"
               ></path>
@@ -100,8 +100,8 @@ const RideHistoryDetail = () => {
             <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
               <title>Download</title>
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M17.3 5h.2c3 0 5.5 2.5 5.5 5.5S20.5 16 17.5 16h-2v-5h-7v5h-2c-3 0-5.5-2.5-5.5-5.5S3.5 5 6.5 5h.2c.7-2.3 2.8-4 5.3-4s4.6 1.7 5.3 4Zm-6.8 14.6V13h3v6.6l3.5-2.3v3.4L12 24l-5-3.3v-3.4l3.5 2.3Z"
                 fill="currentColor"
               ></path>
