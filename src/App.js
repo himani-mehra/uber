@@ -110,3 +110,6 @@ return (
     </div>
   </Router>
 );
+
+
+export default App;
