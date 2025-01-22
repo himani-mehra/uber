@@ -56,3 +56,8 @@
 .two-dropdown {
   gap: 5px;
 }
+@media (max-width: 768px) {
+  .past {
+    margin: 10px 0;
+  }
+  }

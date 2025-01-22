@@ -8,7 +8,7 @@ import Ride from "../ride/ride";
 import RideMobile from "../mobile/mobileRide/mobileRide";
 import Shuttle from "../shuttle/shuttle";
 import ShuttleMobile from "../mobile/mobileShuttle/mobileShuttle";
-// import Map from "../map/map";
+import Map from "../map/map";
 
 const Body = ({ activeOption, userLocation }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -23,7 +23,8 @@ const Body = ({ activeOption, userLocation }) => {
   return (
     <div className="body-component">
       <div className="scrollable-content">
-        {activeOption === "ride" && (isMobile ? <RideMobile /> : <Ride />)}
+        {activeOption === "ride" &&
+          (isMobile ? <RideMobile userLocation={userLocation} /> : <Ride />)}
         {activeOption === "packages" &&
           (isMobile ? <PackageMobile /> : <Package />)}
         {activeOption === "rentals" &&
@@ -31,9 +32,13 @@ const Body = ({ activeOption, userLocation }) => {
         {activeOption === "shuttle" &&
           (isMobile ? <ShuttleMobile /> : <Shuttle />)}
       </div>
-      {/* <div className="fixed-content">
-        <Map userLocation={userLocation} />
-      </div> */}
+      {isMobile ? (
+        " "
+      ) : (
+        <div className="fixed-content">
+          <Map userLocation={userLocation} />
+        </div>
+      )}
     </div>
   );
 };

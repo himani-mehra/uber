@@ -1,9 +1,14 @@
 import React, { useEffect, useRef } from "react";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+import L from "leaflet"; // Import Leaflet
+import "leaflet/dist/leaflet.css"; // Import CSS
 import "leaflet-routing-machine";
+import "leaflet-routing-machine/dist/leaflet-routing-machine.css"; // Ensure routing styles are loaded
 import carLogo from "../../assests/car-marker.png";
 import { generateRandomCars } from "../../utils/randomCar";
+
+if (typeof window !== "undefined") {
+  window.L = L;
+}
 
 const Map = ({ userLocation }) => {
   const mapRef = useRef(null);
@@ -14,7 +19,7 @@ const Map = ({ userLocation }) => {
 
   const updateCarMarkers = (center) => {
     carMarkersRef.current.forEach((marker) =>
-      mapInstance.current.removeLayer(marker)
+      mapInstance?.current?.removeLayer(marker)
     );
     carMarkersRef.current = [];
 
@@ -37,8 +42,8 @@ const Map = ({ userLocation }) => {
   };
 
   useEffect(() => {
-    if (!userLocation) return;
-
+    if (typeof window === "undefined" || !userLocation) return;
+    
     if (!mapInstance.current) {
       mapInstance.current = L.map(mapRef.current, {
         center: [userLocation.latitude, userLocation.longitude],
@@ -75,25 +80,20 @@ const Map = ({ userLocation }) => {
     const customIcon = L.icon({
       iconUrl: carLogo,
       iconSize: [40, 40],
-      iconAnchor: [32, 64],
-      popupAnchor: [0, -64],
+      iconAnchor: [20, 40],
+      popupAnchor: [0, -40],
     });
 
     if (!markerRef.current) {
       markerRef.current = L.marker(
         [userLocation.latitude, userLocation.longitude],
-        {
-          icon: customIcon,
-        }
+        { icon: customIcon }
       )
         .addTo(mapInstance.current)
         .bindPopup("You")
         .openPopup();
     } else {
-      markerRef.current.setLatLng([
-        userLocation.latitude,
-        userLocation.longitude,
-      ]);
+      markerRef.current.setLatLng([userLocation.latitude, userLocation.longitude]);
     }
 
     const interval = setInterval(() => {
@@ -105,6 +105,9 @@ const Map = ({ userLocation }) => {
       if (mapInstance.current) {
         mapInstance.current.remove();
         mapInstance.current = null;
+      }
+      if (routeControlRef.current) {
+        routeControlRef.current = null;
       }
     };
   }, [userLocation]);

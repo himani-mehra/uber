@@ -1,12 +1,12 @@
 import React from "react";
 import "./travelHistory.css";
-import map from "../../../assests/map.png";
+import bike from "../../../assests/bike.png";
 
 const TravelHistory = ({ location, time, amount }) => {
   return (
     <div className="history">
       <div className="vehical-img">
-        <img style={{ width: "100px", height: "100px" }} src={map} alt="Map" />
+        <img style={{ width: "100px", height: "100px" }} src={bike} alt="Map" />
       </div>
       <div className="history-details">
         <div className="text-xl font-bold uppercase">{location}</div>

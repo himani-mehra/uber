@@ -9,6 +9,7 @@ import MobileShuttle from "./components/mobile/mobileShuttle/mobileShuttle";
 import MobileReserve from "./components/mobile/mobileReserve/mobileReserve"
 import React, { useState, useEffect } from "react";
 import LocationPrompt from "./components/locationPrompt";
+import Promos from "./components/promos/Promos"
 import "./App.css";
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
               }
             />
             <Route path="/activity" element={<Activity />} />
+            <Route path="/promos" element={<Promos />} />
             <Route path="/package" element={<MobilePackage />} />
             <Route path="/rental" element={<MobileRental />} />
             <Route path="/shuttle" element={<MobileShuttle />} />

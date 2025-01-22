@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   background-color: white !important;
-  margin:0 20px
+  margin: 0 20px;
 }
 
 .activity-section .left {
@@ -16,7 +16,9 @@
   border-left: 4px solid transparent;
   cursor: pointer;
   padding: 12px 12px 12px calc(24px);
+  font-size: 18px;
 }
+
 .activity-section .left:hover {
   background-color: aliceblue;
   cursor: pointer;
@@ -24,24 +26,44 @@
 
 .activity-section .middle {
   width: 50%;
+  font-size: 18px;
 }
 
 .activity-section .right {
   width: 30%;
+  font-size: 16px;
 }
 
 @media (max-width: 1024px) {
   .activity-section .right {
     display: none;
   }
+
+  .activity-section .middle {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
+  .activity-section {
+    padding: 16px 0;
+    flex-direction: column;
+  }
+
   .activity-section .left {
     display: none;
+    font-size: 14px;
   }
 
   .activity-section .middle {
     width: 100%;
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .activity-section .right {
+    width: 100%;
+    margin-top: 16px;
+    font-size: 14px;
   }
 }

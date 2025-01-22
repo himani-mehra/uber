@@ -26,12 +26,9 @@ const HamburgerDrawer = ({ isOpen, onClose }) => {
         <div className="close-btn-wrapper">
           <span className="close-btn" onClick={onClose}>
             <svg
-              width="inherit"
-              height="inherit"
               viewBox="0 0 24 24"
               fill="none"
               data-baseweb="icon"
-              color="inherit"
             >
               <title>Close</title>
               <path
@@ -56,7 +53,7 @@ const HamburgerDrawer = ({ isOpen, onClose }) => {
                 fill="currentColor"
               ></path>
             </svg>
-            <span className="text-lg font-semibold">Activity</span>
+            <span onClick={() => {navigate("/activity"); onClose();}} className="text-lg font-semibold">Activity</span>
           </span>
           <span className="wallet-promo">
             <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
@@ -75,7 +72,10 @@ const HamburgerDrawer = ({ isOpen, onClose }) => {
                 fill="currentColor"
               ></path>
             </svg>
-            <span className="text-lg font-semibold">Promos</span>
+            <span onClick={() => {
+              navigate("./promos");
+              onClose();
+            }} className="text-lg font-semibold">Promos</span>
           </span>
         </div>
         <div className="uber-help flex flex-col">

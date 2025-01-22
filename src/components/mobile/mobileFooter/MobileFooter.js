@@ -73,7 +73,6 @@ const MobileFooter = () => {
           </span>
         </div>
         <div className="option-grid">
-          {/* Navigate for bottom card options */}
           <div onClick={() => navigate("/ride")}>
             <OptionCard image={mobileRide} title="Ride" />
           </div>

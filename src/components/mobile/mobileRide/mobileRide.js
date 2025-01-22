@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./mobileRide.css";
 import MobileFooter from "../mobileFooter/MobileFooter";
+import Map from "../../map/map";
 
-const Ride = () => {
+const MobileRide = ({ userLocation }) => {
   const [focusedInput, setFocusedInput] = useState(null);
   const [pickup, setPickup] = useState("");
   const [dropoff, setDropoff] = useState("");
@@ -63,7 +64,7 @@ const Ride = () => {
 
   return (
     <div className="mobile-ride">
-      <div className="mobile-ride-details ">
+      <div className="mobile-ride-details">
         <div
           className={`mb-2 mobile-ride-input ${
             focusedInput === "pickup" ? "focused" : ""
@@ -155,9 +156,13 @@ const Ride = () => {
           <i className="bi bi-chevron-down"></i>
         </div>
       </div>
+
+        <Map userLocation={userLocation} />
+      {console.log("User Location in Mobile:", userLocation)}
+
       <MobileFooter />
     </div>
   );
 };
 
-export default Ride;
+export default MobileRide;
