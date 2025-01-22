@@ -1,6 +1,6 @@
 {
-  "name": "uber-clone",
-  "homepage": "https://himani-mehra.github.io/uber-clone",
+  "name": "uber",
+  "homepage": "https://himani-mehra.github.io/uber",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
