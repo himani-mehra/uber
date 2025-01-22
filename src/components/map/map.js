@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import L from "leaflet"; // Import Leaflet
-import "leaflet/dist/leaflet.css"; // Import CSS
+import "leaflet/dist/leaflet.css";
 import "leaflet-routing-machine";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 import carLogo from "../../assests/car-marker.png";
