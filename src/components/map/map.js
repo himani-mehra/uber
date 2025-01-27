@@ -5,6 +5,7 @@ import "leaflet-routing-machine";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 import carLogo from "../../assests/car-marker.png";
 import { generateRandomCars } from "../../utils/randomCar";
+import "./map.css"
 
 if (typeof window !== "undefined") {
   window.L = L;
@@ -43,11 +44,12 @@ const Map = ({ userLocation }) => {
 
   useEffect(() => {
     if (typeof window === "undefined" || !userLocation) return;
-    
+
     if (!mapInstance.current) {
       mapInstance.current = L.map(mapRef.current, {
         center: [userLocation.latitude, userLocation.longitude],
         zoom: 15,
+        zoomControl: false, // Disable the default zoom control
       });
 
       L.tileLayer(
@@ -59,6 +61,15 @@ const Map = ({ userLocation }) => {
           maxZoom: 20,
         }
       ).addTo(mapInstance.current);
+
+      // Set zoom control position to bottom-right
+      L.control
+        .zoom({
+          position: "bottomright",
+          border:"none",
+          borderRadius: "18px"
+        })
+        .addTo(mapInstance.current);
 
       const pickup = [12.9255, 77.6247];
       const dropoff = [12.9764, 77.7044];
@@ -74,15 +85,29 @@ const Map = ({ userLocation }) => {
           L.latLng(dropoff),
         ],
         routeWhileDragging: true,
+        show: false,
+        createMarker: () => null,
+        addWaypoints: false,
+        fitSelectedRoutes: false,
       }).addTo(mapInstance.current);
+
+      setTimeout(() => {
+        document.querySelector(".leaflet-routing-container").style.display =
+          "none";
+      }, 1000);
     }
 
-    const customIcon = L.icon({
-      iconUrl: carLogo,
-      iconSize: [40, 40],
-      iconAnchor: [20, 40],
-      popupAnchor: [0, -40],
-    });
+   const customIcon = L.divIcon({
+     className: "user-location-icon",
+     html: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <title>Radio button selected</title>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11Zm0-8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" fill="currentColor"></path>
+    </svg>`,
+     iconSize: [24, 24],
+     iconAnchor: [12, 12],
+     popupAnchor: [0, -12],
+   });
+
 
     if (!markerRef.current) {
       markerRef.current = L.marker(
@@ -90,15 +115,18 @@ const Map = ({ userLocation }) => {
         { icon: customIcon }
       )
         .addTo(mapInstance.current)
-        .bindPopup("You")
         .openPopup();
     } else {
-      markerRef.current.setLatLng([userLocation.latitude, userLocation.longitude]);
+      markerRef.current.setLatLng([
+        userLocation.latitude,
+        userLocation.longitude,
+      ]);
     }
 
+    // Update car markers every 8 seconds
     const interval = setInterval(() => {
       updateCarMarkers(userLocation);
-    }, 2000);
+    }, 8000);
 
     return () => {
       clearInterval(interval);
@@ -112,7 +140,8 @@ const Map = ({ userLocation }) => {
     };
   }, [userLocation]);
 
-  return <div ref={mapRef} style={{ height: "500px", width: "100%" }}></div>;
+
+  return <div className="map-dimensions" ref={mapRef}></div>;
 };
 
 export default Map;

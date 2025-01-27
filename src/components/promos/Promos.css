@@ -1,62 +1,30 @@
 .promos-container {
   padding: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.promos-container .promo-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
 .promo-title {
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 8px;
 }
-.promos-container .promo-input {
+
+.promo-input {
   margin-bottom: 30px;
   box-sizing: border-box;
   background-color: transparent;
-  border-width: 0;
-  border-style: none;
-  outline: none;
-  width: 100%;
   border: 2px solid black;
   border-radius: 8px;
   padding: 12px 16px;
   line-height: 24px;
   height: 48px;
+  outline: none;
+  width: 100%;
 }
 
-@media (max-width: 1024px) {
-  .promos-container {
-    padding: 12px;
-  }
-
-  .promos-container .promo-input {
-    padding: 10px 14px;
-    height: 40px;
-  }
-
-  .promos-container .title {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .promos-container {
-    padding: 8px;
-  }
-
-  .promos-container .promo-input {
-    padding: 8px 12px;
-    height: 40px;
-  }
-
-  .promos-container .title {
-    font-size: 1rem;
-    margin-bottom: 8px;
-  }
-}
 .apply-btn {
   border: 1px solid #f3f3f3;
   padding: 10px 12px;
@@ -65,40 +33,60 @@
   display: flex;
   align-items: center;
   color: rgb(166, 166, 166);
-  margin-bottom: 20px;
+  cursor: not-allowed;
+  width: 13vh;
 }
+
 .apply-btn-active {
-  padding: 10px 12px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
   background-color: black;
   color: white;
-  margin-bottom: 20px;
+  cursor: pointer;
 }
+
+.promo-history-container {
+  flex: 1; /* Ensures this section takes up remaining space */
+  overflow-y: auto;
+  padding-bottom: 60px; /* Space for the Go back button */
+}
+
+.promo-history {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
 .promo-tag-icon {
-    margin-left: 10px;
   display: flex;
   align-items: center;
 }
+
 .promo-section {
   padding: 10px 0;
   border-bottom: 1px solid #f3f3f3;
 }
-.promo-tag-icon svg {
-  color: rgb(87, 211, 118);
+
+.go-back-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 10px 16px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .go-back {
-  width: 100%;
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0, 0, 1, 1);
-  cursor: pointer;
-  margin: 0px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   border-radius: 8px;
   padding: 10px 12px;
-  color: rgb(0, 0, 0);
-  background-color: rgb(243, 243, 243);
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }

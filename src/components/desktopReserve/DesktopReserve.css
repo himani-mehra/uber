@@ -1,4 +1,4 @@
-.terms-header {
+.desktop-terms-header {
   position: sticky;
   top: 0;
   z-index: 12;
@@ -10,20 +10,20 @@
   border-bottom: 1px solid #e1e0e0;
 }
 
-.terms-conditions {
+.desktop-terms-conditions {
   position: relative;
   z-index: 10;
   overflow-y: auto;
   max-height: calc(100vh - 70px);
 }
 
-.mobile-reserve-cover {
+.desktop-reserve-cover {
   display: flex;
   flex-direction: column;
   padding: 0 16px;
 }
 
-.mobile-reserve {
+.desktop-reserve {
   margin-bottom: 20px;
   flex: initial;
   padding: 16px 0;
@@ -31,7 +31,7 @@
   flex-direction: column;
 }
 
-.mobile-get-reserve {
+.desktop-get-reserve {
   display: inline-block;
   margin-bottom: 12px;
   position: relative;
@@ -39,12 +39,12 @@
   font-weight: 700;
 }
 
-.mobile-reserve-details {
+.desktop-reserve-details {
   font-size: 16px;
   border-radius: 8px;
 }
 
-.reserve-input {
+.desktop-reserve-input {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -61,11 +61,11 @@
   justify-content: space-between;
 }
 
-.mobile-input-field::placeholder {
+.desktop-input-field::placeholder {
   color: black;
 }
 
-.mobile-search {
+.desktop-search {
   border-radius: 8px;
   background-color: rgb(243, 243, 243);
   border-radius: 8px;
@@ -73,7 +73,7 @@
   padding: 8px 16px;
 }
 
-.reserve-ride-details {
+.desktop-reserve-ride-details {
   display: flex;
   gap: 10px;
   font-size: 14px;
@@ -82,19 +82,19 @@
   align-items: center;
 }
 
-.reserve-ride-details svg {
+.desktop-reserve-ride-details svg {
   width: 16px;
   height: 16px;
 }
 
-.see-terms {
+.desktop-see-terms {
   font-size: 14px;
   font-weight: normal;
   border-radius: 8px;
   color: rgb(75, 75, 75);
 }
 
-.reserve-bottom-card {
+.desktop-reserve-bottom-card {
   position: fixed;
   bottom: -100%;
   left: 0;
@@ -112,7 +112,7 @@
   border-top-right-radius: 16px;
 }
 
-.reserve-overlay {
+.desktop-reserve-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -121,7 +121,7 @@
   background-color: rgba(9, 7, 7, 0.3);
 }
 
-.reserve-close-button {
+.desktop-reserve-close-button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -131,27 +131,18 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.next-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-  padding: 10px 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.next {
+.desktop-next {
+  background-color: rgb(243,243,243);
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-  border-radius: 8px;
+  border-radius: 50%;
   padding: 10px 12px;
-  background-color: black;
-  color: white;
+  color: black;
   border: none;
   cursor: pointer;
-  width: 100%;
+  height: 36px;
+  width: 36px;
+  margin-bottom: 8px;
 }

@@ -1,8 +1,10 @@
 import React from 'react'
 import "./requestRide.css"
 import taxi from "../../../assests/taxi.svg"
+import { useNavigate } from 'react-router-dom'
 
 const RequestRide = () => {
+  const navigate = useNavigate();
   return (
     <div className="request-ride">
       <img src={taxi} />
@@ -10,7 +12,7 @@ const RequestRide = () => {
       <div className="text-grayish">
         Book an Uber from a web browser, no app install necessary.
       </div>
-      <button className="request-a-ride">Request a ride</button>
+      <button onClick={() => {navigate("/")}} className="request-a-ride">Request a ride</button>
     </div>
   );
 }

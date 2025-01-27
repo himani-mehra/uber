@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./mobileReserve.css";
+import { useNavigate } from "react-router-dom";
 
 const Reserve = () => {
+  const navigate = useNavigate();
   const [isSeeTermsVisible, setIsSeeTermsVisible] = useState(false);
   
   const handleClickSeeTerms = () => {
@@ -101,7 +103,11 @@ const Reserve = () => {
         <div onClick={handleClickSeeTerms} className="see-terms">
           <u> See terms</u>
         </div>
-        <div className={`reserve-bottom-card ${isSeeTermsVisible ? "bottom-0" : "-bottom-full"}`}>
+        <div
+          className={`reserve-bottom-card ${
+            isSeeTermsVisible ? "bottom-0" : "-bottom-full"
+          }`}
+        >
           <div className="terms-header">
             <div>Reservations Terms and Conditions</div>
             <div onClick={handleClickSeeTerms}>
@@ -190,6 +196,11 @@ const Reserve = () => {
               Uber doesn't guarantee a driver will accept your ride request.
             </div>
           </div>
+        </div>
+        <div className="next-container">
+          <button className="next" onClick={() => navigate("/")}>
+            Next
+          </button>
         </div>
       </div>
     </div>

@@ -6,12 +6,21 @@
   display: flex;
   flex-direction: column;
 }
-
+input {
+  all: unset;
+}
+.dropoff-btn {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 2px;
+}
 .get-ride {
   display: inline-block;
   padding: 0px 16px;
   position: relative;
-  font-family: "UberMove", "UberMoveText", system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "UberMove", "UberMoveText", system-ui, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
@@ -77,4 +86,9 @@
 .suggestions li:hover {
   margin: 10px 0;
   background-color: #f0f0f0;
+}
+.reserve-desktop-style {
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  padding-bottom: 20px;
 }

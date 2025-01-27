@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+* {
+  box-sizing: border-box;
+}
 .app {
   display: flex;
   flex-direction: column;
@@ -24,6 +26,7 @@
     display: block;
   }
   body{
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
   }
@@ -31,5 +34,5 @@
 
 .body-class {
   flex-grow: 1;
-  overflow-y: auto;
+  overflow-y: none;
 }

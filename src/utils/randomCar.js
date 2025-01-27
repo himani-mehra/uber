@@ -12,7 +12,7 @@ export const generateRandomOrientation = () => {
 };
 
 export const generateRandomCars = (center) => {
-  const numberOfCars = Math.floor(Math.random() * 15) + 10;
+  const numberOfCars = Math.floor(Math.random() * 5) + 8;
   const cars = [];
 
   for (let i = 0; i < numberOfCars; i++) {

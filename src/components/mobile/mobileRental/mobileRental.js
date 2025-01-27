@@ -59,7 +59,11 @@ const Mobilerental = () => {
             </div>
           </div>
         </div>
-        <button className="get-started">Get started</button>
+        <div className="get-started-container">
+          <button className="get-started" onClick={() => alert("Going back!")}>
+            Get started
+          </button>
+        </div>
       </div>
     </div>
   );

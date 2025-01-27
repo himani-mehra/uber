@@ -2,13 +2,19 @@ import React, { useState } from "react";
 import "./mobileRide.css";
 import MobileFooter from "../mobileFooter/MobileFooter";
 import Map from "../../map/map";
+import SwitchRider from "../switchRider/SwitchRider"
 
 const MobileRide = ({ userLocation }) => {
+  const [isSwitchRider, setSwitchRider] = useState(false)
   const [focusedInput, setFocusedInput] = useState(null);
   const [pickup, setPickup] = useState("");
   const [dropoff, setDropoff] = useState("");
   const [pickupSuggestions, setPickupSuggestions] = useState([]);
   const [dropoffSuggestions, setDropoffSuggestions] = useState([]);
+
+  const handleSwitchRider = () => {
+    setSwitchRider(true);
+  } 
 
   const handleFocus = (input) => {
     setFocusedInput(input);
@@ -107,7 +113,7 @@ const MobileRide = ({ userLocation }) => {
 
         {/* Dropoff Input */}
         <div
-          className={`px-3 py-3.5 my-4 ride-input flex items-center ${
+          className={`px-3 py-2.5 mt-2 mb-4 ride-input flex items-center ${
             focusedInput === "dropoff" ? "focused" : ""
           }`}
           onClick={() => handleFocus("dropoff")}
@@ -151,14 +157,18 @@ const MobileRide = ({ userLocation }) => {
           <i className="bi bi-clock-fill"></i>Pickup now
           <i className="bi bi-chevron-down"></i>
         </div>
-        <div className="mobile-for-me">
+        <div onClick={handleSwitchRider} className="mobile-for-me">
           <i className="bi bi-person-fill"></i>For me
           <i className="bi bi-chevron-down"></i>
+          {isSwitchRider && (
+            <SwitchRider onClose={() => setSwitchRider(false)} />
+          )}
         </div>
       </div>
 
+      <div className="mobile-map">
         <Map userLocation={userLocation} />
-      {console.log("User Location in Mobile:", userLocation)}
+      </div>
 
       <MobileFooter />
     </div>

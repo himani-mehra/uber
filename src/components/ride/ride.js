@@ -1,12 +1,24 @@
 import React, { useState } from "react";
 import "./ride.css";
+import ForMeModal from "../forMeModal/ForMeModal"
+import Reserve from "../desktopReserve/DesktopReserve"
 
 const Ride = () => {
+  const [isReserveClick, SetReserveClick] = useState(false)
+  const [isForMeClicked, setIsForMeClicked ] = useState(false)
   const [focusedInput, setFocusedInput] = useState(null);
   const [pickup, setPickup] = useState("");
   const [dropoff, setDropoff] = useState("");
   const [pickupSuggestions, setPickupSuggestions] = useState([]);
   const [dropoffSuggestions, setDropoffSuggestions] = useState([]);
+
+  const handleReserveClick = () => {
+    SetReserveClick(true);
+  }
+
+  const handleForMeClicked = () => {
+    setIsForMeClicked(true);
+  }
 
   const handleFocus = (input) => {
     setFocusedInput(input);
@@ -59,6 +71,13 @@ const Ride = () => {
     setDropoff(place.display_name); // Set the dropoff input value
     setDropoffSuggestions([]); // Clear suggestions after selection
   };
+  if(isReserveClick) {
+    return (
+      <div className="reserve-desktop-style">
+        <Reserve />
+      </div>
+    );
+  }
 
   return (
     <div className="ride">
@@ -107,7 +126,7 @@ const Ride = () => {
 
         {/* Dropoff Input */}
         <div
-          className={`my-4 ride-input flex items-center ${
+          className={`my-4 ride-input ${
             focusedInput === "dropoff" ? "focused" : ""
           }`}
           onClick={() => handleFocus("dropoff")}
@@ -128,6 +147,21 @@ const Ride = () => {
             placeholder="Enter Dropoff Location"
             className="input-field"
           />
+          <span className="dropoff-btn">
+            <svg
+              width="0.8em"
+              height="0.8em"
+              viewBox="0 0 24 24"
+              fill="none"
+              color="backgroundPrimary"
+            >
+              <title>Add a stop</title>
+              <path
+                d="M23 10.5h-9.5V1h-3v9.5H1v3h9.5V23h3v-9.5H23v-3Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </span>
         </div>
 
         {/* Dropoff Suggestions */}
@@ -147,17 +181,21 @@ const Ride = () => {
         </div>
 
         {/* Other Inputs */}
-        <div className="my-4 ride-input">
+        <div onClick={handleReserveClick} className="my-4 ride-input">
           <i className="bi bi-clock-fill"></i>
           <div>Pickup now</div>
           <i className="bi bi-chevron-down ml-auto"></i>
         </div>
-        <div className="for-me">
+        <div onClick={handleForMeClicked} className="for-me">
           <i className="bi bi-person-fill"></i>For me
           <i className="bi bi-chevron-down"></i>
         </div>
         <button className="search text-grayish">Search</button>
       </div>
+      {isForMeClicked && (
+        <ForMeModal onClose={() => setIsForMeClicked(false)} />
+      )}
+      {/* {isReserveClick && <Reserve />} */}
     </div>
   );
 };

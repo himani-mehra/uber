@@ -5,6 +5,8 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import person from "../../assests/perosn.jpeg"
 
 const Header = ({onOptionClick}) => {
+  const [manageAccount, setManageAccount] = useState("Manage account");
+  const [wallet, setWallet] = useState("Wallet")
   const [activeOption, setActiveOption] = useState("ride");
    const handleOptionClicked = (option) => {
      setActiveOption(option);
@@ -92,37 +94,80 @@ const Header = ({onOptionClick}) => {
         </span>
       </div>
       <div className="right pr-16 activity-person">
-        <button className="activity" onClick={handleActivityClick}>
+        <button className="gap-2 activity" onClick={handleActivityClick}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <title>Receipt</title>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 23V1h18v22l-5.5-3-3.5 3-3.5-3L3 23ZM7 9h10V6H7v3Zm10 3H7v3h10v-3Z"
+              fill="currentColor"
+            ></path>
+          </svg>
           Activity
         </button>
-        <button className="options" onClick={toggleHeaderDropdown}>
-          <img src={person} className="person-icon" />
-          {isHeaderDropdownOpen ? (
-            <i className="bi bi-chevron-up"></i>
-          ) : (
-            <i className="bi bi-chevron-down"></i>
-          )}
-        </button>
+        <div onClick={toggleHeaderDropdown}>
+          <button className="options">
+            <img src={person} className="person-icon" />
+            {isHeaderDropdownOpen ? (
+              <i className="bi bi-chevron-up"></i>
+            ) : (
+              <i className="bi bi-chevron-down"></i>
+            )}
+          </button>
 
-        {/* Dropdown menu */}
-        <div className={`dropdown-menu ${isHeaderDropdownOpen ? "open" : ""}`}>
-          <ul>
-            <li>
-              <i className="bi bi-wallet-fill mr-2"></i>Wallet
-            </li>
-            <li>
-              <i className="bi bi-tag-fill mr-2"></i>Promos
-            </li>
-            <li>
-              <i className="bi bi-headset mr-2"></i>Support
-            </li>
-            <li>
-              <i className="bi bi-person-fill mr-2"></i>Manage account
-            </li>
-            <li>
-              <i className="bi bi-gear-fill mr-2"></i>Settings
-            </li>
-          </ul>
+          {/* Dropdown menu */}
+          <div
+            className={`dropdown-menu ${isHeaderDropdownOpen ? "open" : ""}`}
+          >
+            <ul>
+              <li
+                onClick={() => {
+                  navigate("/help");
+                }}
+                className="flex gap-2 items-center"
+              >
+                <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                  <title>Lifebuoy</title>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 7c-.8 0-1.6.2-2.3.6L5.4 3.3C7.2 1.9 9.5 1.1 12 1.1s4.8.8 6.6 2.2l-4.3 4.3c-.7-.4-1.5-.6-2.3-.6Zm4.4 7.3c.4-.7.6-1.5.6-2.3 0-.8-.2-1.6-.6-2.3l4.3-4.3c1.4 1.8 2.2 4.1 2.2 6.6s-.8 4.8-2.2 6.6l-4.3-4.3Zm-2.1 2.1c-.7.4-1.5.6-2.3.6-.8 0-1.6-.2-2.3-.6l-4.3 4.3c1.8 1.4 4.1 2.2 6.6 2.2s4.8-.8 6.6-2.2l-4.3-4.3ZM1 12c0-2.5.8-4.8 2.2-6.6l4.3 4.3c-.4.7-.6 1.5-.6 2.3 0 .8.2 1.6.6 2.3l-4.3 4.3C1.8 16.8 1 14.5 1 12Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                Help
+              </li>
+              <li
+                onMouseEnter={() => {
+                  setWallet("Not implemented");
+                }}
+                onMouseLeave={() => setWallet("Wallet")}
+              >
+                <i className="bi bi-wallet-fill mr-2"></i>
+                {wallet}
+              </li>
+              <li>
+                <i className="bi bi-tag-fill mr-2"></i>Promos
+              </li>
+              <li
+                onMouseEnter={() => {
+                  setManageAccount("Not implemented");
+                }}
+                onMouseLeave={() => setManageAccount("Manage account")}
+              >
+                <i className="bi bi-person-fill mr-2"></i>
+                {manageAccount}
+              </li>
+              <li
+                onClick={() => {
+                  navigate("/setting");
+                }}
+              >
+                <i className="bi bi-gear-fill mr-2"></i>Settings
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
