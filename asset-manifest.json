@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/uber/static/css/main.023ccc78.css",
-    "main.js": "/uber/static/js/main.00a466f6.js",
+    "main.js": "/uber/static/js/main.506a4765.js",
     "static/js/488.fc2f187e.chunk.js": "/uber/static/js/488.fc2f187e.chunk.js",
     "static/media/tripMap.png": "/uber/static/media/tripMap.9363448dd4cdbf8a238f.png",
     "static/media/bootstrap-icons.woff?": "/uber/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
@@ -17,11 +17,11 @@
     "static/media/bike.png": "/uber/static/media/bike.d1ef55771f5a231b7cb0.png",
     "index.html": "/uber/index.html",
     "main.023ccc78.css.map": "/uber/static/css/main.023ccc78.css.map",
-    "main.00a466f6.js.map": "/uber/static/js/main.00a466f6.js.map",
+    "main.506a4765.js.map": "/uber/static/js/main.506a4765.js.map",
     "488.fc2f187e.chunk.js.map": "/uber/static/js/488.fc2f187e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.023ccc78.css",
-    "static/js/main.00a466f6.js"
+    "static/js/main.506a4765.js"
   ]
 }
