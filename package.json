@@ -4,6 +4,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.1",
+    "@mui/lab": "^6.0.0-beta.24",
+    "@mui/material": "^6.4.1",
+    "@mui/x-date-pickers": "^7.24.1",
     "@react-google-maps/api": "^2.20.5",
     "@reduxjs/toolkit": "^2.5.0",
     "@types/mapbox-gl": "^3.4.1",
@@ -11,6 +17,7 @@
     "baseui": "^15.0.0",
     "bootstrap-icons": "^1.11.3",
     "cra-template": "1.2.0",
+    "dayjs": "^1.11.13",
     "leaflet": "^1.9.4",
     "leaflet-routing-machine": "^3.2.12",
     "mapbox-gl": "^3.9.3",
@@ -21,6 +28,8 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.2",
     "react-scripts": "5.0.1",
+    "styletron-engine-atomic": "^1.6.2",
+    "styletron-react": "^6.1.1",
     "web-vitals": "^4.2.4"
   },
   "scripts": {

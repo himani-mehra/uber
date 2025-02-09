@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./package.css";
 
 const Package = () => {
-  const [focusedInput, setFocusedInput] = useState(null); // Track focused input
+  const [focusedInput, setFocusedInput] = useState("send"); // Track focused input
   const [pickup, setPickup] = useState(""); // Track pickup input value
   const [dropoff, setDropoff] = useState(""); // Track dropoff input value
   const [pickupSuggestions, setPickupSuggestions] = useState([]); // Store pickup suggestions

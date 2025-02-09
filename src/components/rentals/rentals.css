@@ -20,7 +20,7 @@
 .rentals-details {
   font-size: 16px;
   border-radius: 8px;
-  padding: 0 16px;
+  padding: 0 16px 10px 16px;
 }
 
 .rentals-input {

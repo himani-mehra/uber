@@ -4,6 +4,8 @@ import ForMeModal from "../forMeModal/ForMeModal"
 import Reserve from "../desktopReserve/DesktopReserve"
 
 const Ride = () => {
+   const [pickupCoords, setPickupCoords] = useState(null);
+   const [dropoffCoords, setDropoffCoords] = useState(null);
   const [isReserveClick, SetReserveClick] = useState(false)
   const [isForMeClicked, setIsForMeClicked ] = useState(false)
   const [focusedInput, setFocusedInput] = useState(null);
@@ -62,15 +64,23 @@ const Ride = () => {
     }
   };
 
-  const handlePickupSuggestionClick = (place) => {
-    setPickup(place.display_name); // Set the pickup input value
-    setPickupSuggestions([]); // Clear suggestions after selection
-  };
+const handlePickupSuggestionClick = (place) => {
+  setPickup(place.display_name);
+  setPickupSuggestions([]);
+  console.log("Selected Pickup Location:", place.display_name);
+  console.log("Latitude:", place.lat, "Longitude:", place.lon);
+  setPickupCoords({ lat: place.lat, lon: place.lon }); // Pass data to parent
+};
 
-  const handleDropoffSuggestionClick = (place) => {
-    setDropoff(place.display_name); // Set the dropoff input value
-    setDropoffSuggestions([]); // Clear suggestions after selection
-  };
+const handleDropoffSuggestionClick = (place) => {
+  setDropoff(place.display_name);
+  setDropoffSuggestions([]);
+  console.log("Selected Dropoff Location:", place.display_name);
+  console.log("Latitude:", place.lat, "Longitude:", place.lon);
+  setDropoffCoords({ lat: place.lat, lon: place.lon }); // Pass data to parent
+};
+
+
   if(isReserveClick) {
     return (
       <div className="reserve-desktop-style">
@@ -103,7 +113,7 @@ const Ride = () => {
             type="text"
             value={pickup}
             onChange={handlePickupChange}
-            placeholder="Enter Pickup Location"
+            placeholder="Pickup Location"
             className="input-field"
           />
         </div>
@@ -126,12 +136,12 @@ const Ride = () => {
 
         {/* Dropoff Input */}
         <div
-          className={`my-4 ride-input ${
+          className={`mb-4 ride-input flex justify-between ${
             focusedInput === "dropoff" ? "focused" : ""
           }`}
           onClick={() => handleFocus("dropoff")}
         >
-          <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+        <span className="flex items-center gap-2"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
             <title>Dropoff</title>
             <path
               fillRule="evenodd"
@@ -144,9 +154,9 @@ const Ride = () => {
             type="text"
             value={dropoff}
             onChange={handleDropoffChange}
-            placeholder="Enter Dropoff Location"
+            placeholder="Dropoff Location"
             className="input-field"
-          />
+          /></span>
           <span className="dropoff-btn">
             <svg
               width="0.8em"
@@ -181,7 +191,7 @@ const Ride = () => {
         </div>
 
         {/* Other Inputs */}
-        <div onClick={handleReserveClick} className="my-4 ride-input">
+        <div onClick={handleReserveClick} className="mb-4 ride-input">
           <i className="bi bi-clock-fill"></i>
           <div>Pickup now</div>
           <i className="bi bi-chevron-down ml-auto"></i>

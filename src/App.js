@@ -42,8 +42,6 @@ function App() {
 
   return (
     <Router basename="/uber">
-      {" "}
-      {/* This makes all routes relative to "/uber" */}
       <div className="app">
         <LocationPrompt onLocationUpdate={handleLocationUpdate} />
 

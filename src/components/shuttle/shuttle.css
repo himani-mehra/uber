@@ -68,18 +68,6 @@
   width: 100%;
   padding: 8px 16px;
 }
-
-.for-me {
-  display: inline-flex;
-  background-color: rgb(243, 243, 243);
-  cursor: pointer;
-  font-size: 14px;
-  max-width: 200px;
-  border-radius: 30px;
-  padding: 10px 12px;
-  gap: 5px;
-  margin-bottom: 16px;
-}
 .explore-routes{
   -webkit-box-align: center;
   align-items: center;

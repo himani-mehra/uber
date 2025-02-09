@@ -36,7 +36,7 @@ const Body = ({ activeOption, userLocation }) => {
         " "
       ) : (
         <div className="fixed-content">
-          <Map userLocation={userLocation} />
+          {/* <Map userLocation={userLocation} /> */}
         </div>
       )}
     </div>

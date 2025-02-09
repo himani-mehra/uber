@@ -10,6 +10,7 @@ input {
   all: unset;
 }
 .dropoff-btn {
+  display:flex;
   background-color: black;
   color: white;
   border-radius: 50%;
@@ -45,6 +46,7 @@ input {
   gap: 8px;
   display: flex;
   min-height: 46px;
+  
 }
 
 .search {
@@ -66,14 +68,13 @@ input {
   border-radius: 30px;
   padding: 10px 12px;
   gap: 5px;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
 }
 
 .suggestions {
   list-style: none;
   padding: 0;
   margin: 0;
-  border: 1px solid #ddd;
   max-height: 150px;
   overflow-y: auto;
 }
