@@ -24,8 +24,8 @@ const Reserve = () => {
               <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
                 <title>Calendar</title>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M23 8V4h-3V1h-3v3H7V1H4v3H1v4h22Zm0 15H1V10h22v13ZM8 14H5v3h3v-3Z"
                   fill="currentColor"
                 ></path>
@@ -70,8 +70,8 @@ const Reserve = () => {
           <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
             <title>Calendar</title>
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M23 8V4h-3V1h-3v3H7V1H4v3H1v4h22Zm0 15H1V10h22v13ZM8 14H5v3h3v-3Z"
               fill="currentColor"
             ></path>
@@ -92,8 +92,8 @@ const Reserve = () => {
           <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
             <title>Credit card</title>
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M1 4h22v4H1V4Zm0 7h22v9H1v-9Z"
               fill="currentColor"
             ></path>
