@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/uber/static/css/main.023ccc78.css",
-    "main.js": "/uber/static/js/main.506a4765.js",
+    "main.css": "/uber/static/css/main.8e7aec7c.css",
+    "main.js": "/uber/static/js/main.515777e3.js",
     "static/js/488.fc2f187e.chunk.js": "/uber/static/js/488.fc2f187e.chunk.js",
     "static/media/tripMap.png": "/uber/static/media/tripMap.9363448dd4cdbf8a238f.png",
-    "static/media/bootstrap-icons.woff?": "/uber/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
-    "static/media/bootstrap-icons.woff2?": "/uber/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/bootstrap-icons.woff?": "/uber/static/media/bootstrap-icons.ff25a7ff93ea67f144c5.woff",
+    "static/media/bootstrap-icons.woff2?": "/uber/static/media/bootstrap-icons.ca961065e092080ca3f5.woff2",
     "static/media/mobile-courier.jpg": "/uber/static/media/mobile-courier.b1254d6a58e2e4986482.jpg",
     "static/media/rental.png": "/uber/static/media/rental.8f138df8640a605ab8bb.png",
     "static/media/taxi.svg": "/uber/static/media/taxi.d6bf879c54ced5d69caa276e1057fcbb.svg",
@@ -16,12 +16,12 @@
     "static/media/mobile-shuttle.png": "/uber/static/media/mobile-shuttle.518446bcff7ed151dc08.png",
     "static/media/bike.png": "/uber/static/media/bike.d1ef55771f5a231b7cb0.png",
     "index.html": "/uber/index.html",
-    "main.023ccc78.css.map": "/uber/static/css/main.023ccc78.css.map",
-    "main.506a4765.js.map": "/uber/static/js/main.506a4765.js.map",
+    "main.8e7aec7c.css.map": "/uber/static/css/main.8e7aec7c.css.map",
+    "main.515777e3.js.map": "/uber/static/js/main.515777e3.js.map",
     "488.fc2f187e.chunk.js.map": "/uber/static/js/488.fc2f187e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.023ccc78.css",
-    "static/js/main.506a4765.js"
+    "static/css/main.8e7aec7c.css",
+    "static/js/main.515777e3.js"
   ]
 }
