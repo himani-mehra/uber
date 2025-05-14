@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# 🚗 Uber Clone - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive, user-friendly Uber clone built to mimic the essential features of the Uber ride-hailing app. This project showcases my skills in frontend development, implementing interactive UI components, and leveraging **Google Maps API** for location-based services.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎯 Key Features
 
-### `npm start`
+- 📍 **Real-Time Location** with Google Maps API integration
+- 🚗 **Ride Request** interface (select pickup/drop-off locations)
+- 💻 **Responsive Design** optimized for mobile, tablet, and desktop devices
+- 🏠 **User Authentication** (Simulated for demo purposes)
+- 🎨 **Clean UI** with modern design elements, similar to the Uber app
+- 🔧 **Efficient State Management** using Vanilla JavaScript
+- 🌐 **Smooth Transitions** and **Interactive Components**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+| Category        | Technologies Used                     |
+|----------------|----------------------------------------|
+| Frontend        | HTML5, CSS3, JavaScript                |
+| Maps & Location | Google Maps API                       |
+| State Management | Vanilla JavaScript                   |
+| Hosting         | GitHub Pages                          |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📸 Screenshots<img width="1470" alt="Screenshot 2025-05-14 at 10 15 39 PM" src="https://github.com/user-attachments/assets/3d5d08a7-dbf1-4e6d-8d74-ff13fa548d60" />
+<img width="1470" alt="Screenshot 2025-05-14 at 10 16 01 PM" src="https://github.com/user-attachments/assets/f3f6ae1f-095f-492e-b858-eb17210bd9ab" />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> 
+> *Landing page with the ride request interface.*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🧠 Thought Process
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> *“Recreating a real-world app is not just about mimicking the UI; it's about understanding the user flow and interaction.”*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Building the Uber Clone, I focused on these aspects:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Simplicity & User Experience:** The goal was to keep the interface simple, as Uber’s design focuses on ease of use.
+- **Realistic Functionality:** Simulated features like ride requests and dynamic maps gave me a chance to demonstrate my understanding of how real apps integrate APIs.
+- **Responsive Design:** Ensuring that the clone works seamlessly across all devices (mobile-first approach).
+- **State Management:** Using vanilla JavaScript for state handling, avoiding heavy frameworks to keep it lightweight.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📂 Folder Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+├── index.html
+├── assets/
+│ ├── css/
+│ ├── js/
+│ ├── img/
+├── README.md
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🧪 How to Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/himani-mehra/uber-clone.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd uber-clone
+    ```
+3. Open `index.html` in your browser:
+    ```bash
+    open index.html
+    ```
 
-### Making a Progressive Web App
+> Alternatively, you can view the live demo directly on GitHub Pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🌐 Live Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🔗 [Uber Clone - Live Demo](https://himani-mehra.github.io/uber/)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📬 Connect with Me
 
-### `npm run build` fails to minify
+- 💻 GitHub: [@himani-mehra](https://github.com/himani-mehra)
+- 📝 Medium: [@himanimehra](https://medium.com/@himanimehra)
+- 💼 LinkedIn: [Himani Mehra](https://linkedin.com/in/himani-mehra)
+- 📩 Email: [himanimehra528@gmail.com](mailto:himanimehra528@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## ✅ Status
+
+This project is **fully functional** and maintained with improvements planned for future releases, including enhanced UX and additional features like ride tracking.
+
+---
+
+## 📄 License
+
+This project is open-source under the [MIT License](LICENSE).
+
+---
