@@ -47,20 +47,6 @@ Building the Uber Clone, I focused on these aspects:
 - **Responsive Design:** Ensuring that the clone works seamlessly across all devices (mobile-first approach).
 - **State Management:** Using vanilla JavaScript for state handling, avoiding heavy frameworks to keep it lightweight.
 
----
-
-## 📂 Folder Structure
-
-├── index.html
-├── assets/
-│ ├── css/
-│ ├── js/
-│ ├── img/
-├── README.md
-
-
-
----
 
 ## 🧪 How to Run Locally
 
